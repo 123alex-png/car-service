@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.car.maintenance.controller.CarServiceProductSelectionController">
+    <Label text="选择服务项目" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="serviceTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colServiceName" text="服务名称" prefWidth="200"/>
+            <TableColumn fx:id="colUnitPrice" text="参考单价" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Label text="输入价格:"/>
+        <TextField fx:id="txtPrice" promptText="请输入价格"/>
+        <Label text="输入数量"/>
+        <TextField fx:id="txtQuantity" promptText="请输入数量"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="btnConfirm" text="确认"/>
+        <Button fx:id="btnCancel" text="取消"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.car.maintenance.controller.MainController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- 标题 -->
+    <Label text="汽车维修管理系统" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- 菜单按钮区域 -->
+    <VBox spacing="10">
+        <Button fx:id="btnViewCustomers" text="查看客户单" prefWidth="200"/>
+        <Button fx:id="bthViewServiceProducts" text="服务商品管理" prefWidth="200"/>  <!-- 预留入口 -->
+        <Button fx:id="bthViewMaintenances" text="保养记录" prefWidth="200"/>  <!-- 预留入口 -->
+    </VBox>
+
+</VBox>

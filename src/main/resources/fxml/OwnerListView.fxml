@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.car.maintenance.controller.OwnerListController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="车主单管理" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="ownerTable" prefHeight="300" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colName" text="车主姓名" prefWidth="200"/>
+            <TableColumn fx:id="colPhone" text="联系电话" prefWidth="200"/>
+            <TableColumn fx:id="colCars" text="所有车辆" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- 按钮区域 -->
+    <HBox spacing="10">
+        <Button fx:id="btnAddOwner" text="添加车主" prefWidth="150"/>
+        <Button fx:id="btnBack" text="返回主页" prefWidth="150"/>
+    </HBox>
+</VBox>
+
+

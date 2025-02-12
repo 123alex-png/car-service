@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.car.maintenance.controller.MaintenanceDetailController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="保养记录详情" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="车主:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtOwnerName" GridPane.columnIndex="1" GridPane.rowIndex="0" editable="false"/>
+        <Button fx:id="btnSelectOwner" text="浏览" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+
+        <Label text="车牌号:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtCarPlate" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"/>
+        <Button fx:id="btnSelectCar" text="浏览" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+
+        <Label text="保养日期:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <DatePicker fx:id="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="备注:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="txtRemark" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <Label text="保养明细:" style="-fx-font-weight: bold;"/>
+
+    <TableView fx:id="detailTable" prefHeight="200" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="colService" text="服务项目" prefWidth="200"/>
+            <TableColumn fx:id="colQuantity" text="数量" prefWidth="100"/>
+            <TableColumn fx:id="colPrice" text="单价" prefWidth="100"/>
+            <TableColumn fx:id="colTotal" text="总价" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="btnAddDetail" text="添加明细" prefWidth="150"/>
+        <Button fx:id="btnDeleteDetail" text="删除明细" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="btnConfirm" text="确认" prefWidth="150"/>
+        <Button fx:id="btnCancel" text="取消" prefWidth="150"/>
+    </HBox>
+</VBox>

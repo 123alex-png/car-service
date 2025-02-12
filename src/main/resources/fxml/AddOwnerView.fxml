@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.car.maintenance.controller.AddOwnerController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="添加车主信息" style="-fx-font-size: 18px;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="车主姓名:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="联系电话:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="txtPhone" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <!-- 车辆信息 -->
+    <Label text="车辆信息:" style="-fx-font-weight: bold;"/>
+    <TableView fx:id="carTable" prefHeight="150" prefWidth="350">
+        <columns>
+            <TableColumn fx:id="colLicensePlate" text="车牌号" prefWidth="100"/>
+            <TableColumn fx:id="colBrand" text="品牌" prefWidth="100"/>
+            <TableColumn fx:id="colModel" text="型号" prefWidth="100"/>
+            <TableColumn fx:id="colDelete" text="操作" prefWidth="50"/>
+        </columns>
+    </TableView>
+
+    <Button fx:id="btnAddCar" text="添加车辆信息"/>
+
+    <!-- 确认 & 取消 -->
+    <HBox spacing="10">
+        <Button fx:id="btnConfirm" text="确认" prefWidth="100"/>
+        <Button fx:id="btnCancel" text="取消" prefWidth="100"/>
+    </HBox>
+</VBox>

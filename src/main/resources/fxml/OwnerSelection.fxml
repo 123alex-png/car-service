@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.car.maintenance.controller.OwnerSelectionController">
+    <Label text="选择车主" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="ownerSelectionTable" prefWidth="400" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colOwnerName" text="车主姓名" prefWidth="150"/>
+            <TableColumn fx:id="colPhone" text="手机号" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="btnSelect" text="选择" prefWidth="100"/>
+        <Button fx:id="btnCancel" text="取消" prefWidth="100"/>
+    </HBox>
+</VBox>
